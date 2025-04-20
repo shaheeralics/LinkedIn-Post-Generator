@@ -308,7 +308,7 @@ if st.session_state.current_script:
     
     # Edit button/expander (hidden by default)
     with st.expander("Edit Post", expanded=False):
-        updated_script = st.text_area("Your YouTube Script (editable):", st.session_state.current_script, height=300)
+        updated_script = st.text_area("Your LinkedIn (editable):", st.session_state.current_script, height=300)
         # Save any manual edits back to the session state
         if updated_script != st.session_state.current_script:
             st.session_state.current_script = updated_script
