@@ -259,8 +259,8 @@ def markdown_to_pdf(markdown_text):
 # ----------------------------
 # 6. Streamlit App Layout & Settings
 # ----------------------------
-st.set_page_config(page_title="YouTube Script Generator", page_icon="🎬")
-st.title("🎬 YouTube Script Generator")
+st.set_page_config(page_title="LinkedIn Post Agent", page_icon="🎬")
+st.title("🎬 LinkedIn Post Agent")
 st.caption("Powered by Gemini 2.0 Flash with Retrieval-Augmented Generation")
 
 # Sidebar: Additional Settings
