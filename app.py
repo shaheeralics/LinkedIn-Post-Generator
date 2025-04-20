@@ -276,28 +276,28 @@ if "current_script" not in st.session_state:
 if "script_history" not in st.session_state:
     st.session_state.script_history = []
 
-if st.button("🆕 New Script"):
+if st.button("🆕 New Post"):
     st.session_state.current_script = ""
     st.session_state.script_history = []
     st.experimental_set_query_params(new_script="true")
 
 # ----------------------------
-# 8. Topic Input and Script Generation
+# 8. Topic Input and post Generation
 # ----------------------------
-topic_input = st.text_input("Enter the topic for your YouTube script:")
+topic_input = st.text_input("Enter the topic for your LinkedIn Post:")
 
-if st.button("Generate Script") and topic_input:
-    with st.spinner("Generating script..."):
+if st.button("Generate Post") and topic_input:
+    with st.spinner("Generating post..."):
         generated_script = generate_youtube_script(topic_input)
     st.session_state.current_script = generated_script
     st.session_state.script_history.append(generated_script)
-    st.success("Script generated successfully!")
+    st.success("post generated successfully!")
 
 # ----------------------------
 # 9. Display the Generated Script and Download Option
 # ----------------------------
 if st.session_state.current_script:
-    st.subheader("Generated Script:")
+    st.subheader("Generated Post:")
     
     # Create a clean and professional preview container
     st.markdown("<h3 style='margin-bottom: 15px; color: #0d47a1;'>📝 Preview</h3>", unsafe_allow_html=True)
@@ -307,7 +307,7 @@ if st.session_state.current_script:
     st.markdown(styled_html, unsafe_allow_html=True)
     
     # Edit button/expander (hidden by default)
-    with st.expander("Edit Script", expanded=False):
+    with st.expander("Edit Post", expanded=False):
         updated_script = st.text_area("Your YouTube Script (editable):", st.session_state.current_script, height=300)
         # Save any manual edits back to the session state
         if updated_script != st.session_state.current_script:
@@ -322,7 +322,7 @@ if st.session_state.current_script:
         st.download_button(
             label="📄 Download as Text",
             data=st.session_state.current_script,
-            file_name="youtube_script.txt",
+            file_name="linkedIn Post.txt",
             mime="text/plain"
         )
     with col2:
@@ -334,7 +334,7 @@ if st.session_state.current_script:
             st.download_button(
                 label="📕 Download as PDF",
                 data=pdf_data,
-                file_name="youtube_script.pdf",
+                file_name="linkedIn Post.pdf",
                 mime="application/pdf"
             )
         except Exception as e:
@@ -364,7 +364,7 @@ if st.session_state.current_script:
 # 11. Display Full Script History (if needed)
 # ----------------------------
 if st.session_state.script_history:
-    st.subheader("Previously Generated Scripts:")
+    st.subheader("Previously Generated Post:")
     for idx, script in enumerate(st.session_state.script_history, start=1):
         st.text_area(f"Script {idx}", script, height=150)
 
