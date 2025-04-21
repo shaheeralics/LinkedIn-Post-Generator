@@ -192,6 +192,8 @@ Authority
 
 Pro tip
 
+The Content should not look like ai generated
+
 Donot use shortcuts like can not = Can’t
 
 Donot use the following keywords:
