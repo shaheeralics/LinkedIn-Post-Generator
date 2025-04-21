@@ -192,6 +192,8 @@ Authority
 
 Pro tip
 
+Donot use shortcuts like can not = Can’t
+
 Donot use the following keywords:
 folks
 preped
