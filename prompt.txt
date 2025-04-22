@@ -30,10 +30,9 @@ Use these guidelines to generate a viral, relatable, and funny posts that feels 
 The Format of the post will have the following things:
 
 The first line is the attractive line
-3 line skip (empty)
+3 lines empty and 
 
-then every important thing separated by one empty line
-
+then every important thing separated in one line and then onne empty line and then important line and so on .
 use the following keywords only.
 
 Sensational & Emotional Triggers
